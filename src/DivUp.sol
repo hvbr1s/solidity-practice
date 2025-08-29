@@ -4,6 +4,8 @@ pragma solidity 0.8.28;
 contract DivUp {
 
     function divUp(uint256 x, uint256 y) public pure returns (uint256) {
+        require(y > 0, "y must not be 0");
+        return (x + y - 1) / y;
         // return x / y rounded up.
         // if y divides x exactly, return x / y
         // if there is a fractional part in the quotient, add 1 to the answer
