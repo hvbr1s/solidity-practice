@@ -13,17 +13,17 @@ After you solve the problems, we suggest trying again a week later to test if yo
 ## Suggested Problem Order
 Problems are grouped by theme and generally go from easier to harder.
 
-- RemoveElement.sol
-- StringConcat.sol
-- StringCompare.sol
-- MemoryArray.sol
-- Bytes.sol
-- StringIndex.sol
-- IsFirstBitSet.sol
-- IsNBitSet.sol
-- ConvertToNegative.sol
-- Multiplication.sol
-- MultiplyConstant.sol
+- RemoveElement.sol ✅
+- StringConcat.sol ✅
+- StringCompare.sol ✅
+- MemoryArray.sol ✅
+- Bytes.sol ✅
+- StringIndex.sol ✅
+- IsFirstBitSet.sol ✅
+- IsNBitSet.sol ✅
+- ConvertToNegative.sol ✅
+- Multiplication.sol ✅
+- MultiplyConstant.sol ✅
 - DivUp.sol
 - NinetyNinePercent.sol
 - RationalFunction.sol

@@ -2,7 +2,6 @@
 pragma solidity 0.8.28;
 
 contract Bytes {
-    uint256[] public arr;
     function main(uint8 z) public pure returns (bytes memory) {
         if (z == 0){
             return "";
