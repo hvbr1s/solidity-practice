@@ -26,6 +26,7 @@ contract RobTheBank {
     }
     
     function rob() public payable {
+        bank.deposit();
         // your code here
     }
 

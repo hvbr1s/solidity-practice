@@ -7,15 +7,18 @@ contract ViewContract {
         uint256 y;
     }
 
-    Point public s;
+    Point public s; 
 
     constructor(uint256 x, uint256 y) {
         s = Point({x: x, y: y});
     }
+
 }
 
 contract ReadStruct {
     function main(address a) public view returns (uint256 x, uint256 y) {
+        (uint256 stucty, uint256 structx) = ViewContract(a).s();
+        return(structx, stucty);
         // read the struct from ViewContract and return the x and y values
         // in reversed order, i.e. x is y and y is x
         // do not redeclare the struct in this contract or 

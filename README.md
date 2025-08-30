@@ -24,12 +24,12 @@ Problems are grouped by theme and generally go from easier to harder.
 - ConvertToNegative.sol ✅
 - Multiplication.sol ✅
 - MultiplyConstant.sol ✅
-- DivUp.sol
+- DivUp.sol ✅
 - NinetyNinePercent.sol
-- RationalFunction.sol
-- TryCatchSimple.sol
-- TryCatchReason.sol
-- ReadStruct.sol
+- RationalFunction.sol ✅
+- TryCatchSimple.sol ✅
+- TryCatchReason.sol ✅
+- ReadStruct.sol ✅
 - BadBank.sol
 - IsContract.sol
 - AccountMaker.sol

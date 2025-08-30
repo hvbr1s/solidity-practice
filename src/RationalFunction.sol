@@ -4,6 +4,9 @@ pragma solidity 0.8.28;
 contract RationalFunction {
 
     function f(uint256 x) public pure returns (uint256) {
+        require(x != 0, "x cannot be 0");
+        require(x != 1, "x cannot be 1");
+        return (100 * x) / (x - 1);
         // return the function f(x) = 1 / (1 - 1/x) with two decimals rounded down
         // f(0) = revert
         // f(1) = revert
