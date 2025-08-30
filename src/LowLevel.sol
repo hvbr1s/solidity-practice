@@ -3,6 +3,12 @@ pragma solidity 0.8.28;
 
 contract LowLevel {
     function main(address a) public returns (bool) {
+        (bool success, ) = a.call(abi.encodeWithSignature("foo()"));
+        if (success){
+            return(true);
+        } else {
+            return(false);
+        }
         // call function "foo()" on address a
         // do not use an interface, use a low level call
         // return true if the call succeeded

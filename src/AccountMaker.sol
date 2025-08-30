@@ -15,10 +15,16 @@ contract Account2 {
     }
 }
 
+//        SimpleContract newContract = new SimpleContract{salt: bytes32(_salt)}(_value);
+        // return address(newContract);
+
 contract AccountMaker {
     function makeAccount(address owner) external payable returns (address) {
-        // use create2 to create an account with the owner address
-        // the salt should be the owner address
-        // the value sent to them should be msg.value
+        // CREATE2 salt conversion: address → uint160 → bytes20 → bytes32
+        // 1. uint160(owner) - Convert address to uint160 (both are 160 bits/20 bytes)
+        // 2. bytes20(...) - Convert uint160 to bytes20 (explicit type conversion)
+        // 3. bytes32(...) - Convert bytes20 to bytes32, padding with 12 zero bytes on the RIGHT
+        Account2 newAccount = new Account2{salt: bytes32(bytes20(uint160(owner))), value: msg.value}(owner);
+        return address(newAccount);
     }
 }

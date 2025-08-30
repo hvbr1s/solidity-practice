@@ -3,6 +3,8 @@ pragma solidity 0.8.28;
 
 contract LowLevelArgs2 {
     function main(address a, uint256 x, uint256 y) public {
+        (bool success, ) = a.call(abi.encodeWithSignature("rare(uint256,uint256)", x, y));
+        require(success, "call reverted!");
         // call rare(x, y) using a low-level call
         // if the low level call reverts, revert also
 
