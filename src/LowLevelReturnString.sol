@@ -3,6 +3,13 @@ pragma solidity 0.8.28;
 
 contract LowLevelReturnString {
     function main(address a) public returns (string memory) {
+        (bool success, bytes memory returnedData) = a.call(abi.encodeWithSignature("baz()"));
+        if (success){
+            string memory res = abi.decode(returnedData, (string));
+            return(res);
+        } else {
+            return("");
+        }
         // call function "baz()" on address a
         // do not use an interface
         // baz() returns a string. Return the string.

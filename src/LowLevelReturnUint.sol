@@ -3,6 +3,9 @@ pragma solidity 0.8.28;
 
 contract LowLevelReturnUint {
     function main(address a) public returns (uint256) {
+        (bool success, bytes memory returnedData) = a.call(abi.encodeWithSignature("bar()"));
+        uint res = abi.decode(returnedData, (uint256));
+        return(res);
         // call function "bar()" on address a
         // do not use an interface
         // return the return value of the call

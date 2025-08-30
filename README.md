@@ -34,10 +34,10 @@ Problems are grouped by theme and generally go from easier to harder.
 - IsContract.sol ✅
 - AccountMaker.sol ✅
 - LowLevel.sol ✅
-- LowLevelArgs1.sol
-- LowLevelArgs2.sol
-- LowLevelReturnUint.sol
-- LowLevelReturnString.sol
+- LowLevelArgs1.sol ✅
+- LowLevelArgs2.sol ✅
+- LowLevelReturnUint.sol ✅
+- LowLevelReturnString.sol ✅
 - LowLevelStruct.sol
 - Forwarder.sol
 - SelfCall.sol
