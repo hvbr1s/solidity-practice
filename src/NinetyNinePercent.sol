@@ -3,6 +3,7 @@ pragma solidity 0.8.28;
 
 contract NinetyNinePercent {
     function is99Percent(uint256 x, uint256 y) public pure returns (bool) {
+        return x * 100 >= y * 99;
         // assume y < (2^256 - 1) / 10_000
         // example: x = 990, y = 1000, return true
         // example: x = 989, y = 1000, return false

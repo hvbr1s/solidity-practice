@@ -8,6 +8,9 @@ contract ConvertToNegative {
         if (x > uint256(type(int256).max)+1) {
             revert TooBig();
         }
+        if (x == uint256(type(int256).max)+1) {
+            return type(int256).min;
+        }
         return -int256(x);
     }
 }
