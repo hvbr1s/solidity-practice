@@ -6,7 +6,10 @@ library StorageSetLib {
         uint256 x;
     }
 
-    // implement the function increment(...) that increments the value of x in the struct S
+    function increment(S storage self) public returns (bool) {
+        self.x = self.x +1;
+        return(true);
+    }
 }
 
 
@@ -16,6 +19,7 @@ contract StorageSet {
     using StorageSetLib for StorageSetLib.S;
 
     function main() public {
+        bool ok = s.increment();
         // call s.increment() here
         // s.increment();
     }

