@@ -44,6 +44,6 @@ Problems are grouped by theme and generally go from easier to harder.
 - StorageSet.sol ✅
 - MappingSet.sol ✅
 - NoDelegateCall.sol ✅
-- GetEther.sol
+- GetEther.sol ✅
 
 Fill out the code and then test it with `forge test --match-contract <contract-name>`.
